@@ -1,0 +1,1 @@
+**Basically what happens is that you want to run g++ file.cpp, and then afterwards you want to do ./a.exe or really ./whatever.exe**

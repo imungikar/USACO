@@ -8,7 +8,7 @@
             "type": "shell",
             "command": "g++",
             "args": [
-                "-g",  "apartments.cpp"
+                "-g",  "permutations.cpp"
             ],
             "group": {
                 "kind":"build","isDefault":true
