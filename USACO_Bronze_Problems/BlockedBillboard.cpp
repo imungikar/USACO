@@ -3,23 +3,33 @@
 #include<cstdio>
 using namespace std;
 
+class Rect{
+    public:
+    int x1,y1,x2,y2;
+    int area() { return (y2 - y1) * (x2 - x1); }
+};
+
+
 int main(){
-    freopen("billboard.in", "r", stdin);
-	freopen("billboard.out", "w", stdout);
 
-    int x1, y1, x2, y2, x3, y3, x4, y4, x5, y5, x6, y6;
-    cin >> x1 >> y1 >> x2 >> y2;
-    cin >> x3 >> y3 >> x4 >> y4;
-    cin >> x5 >> y5 >> x6 >> y6;
+freopen("billboard.in", "r", stdin);
+freopen("billboard.out", "w", stdout);
 
-    int billboard1, billboard2, intersection1, intersection2;
-    billboard1 == (x2-x1) * (y2-y1);
-    billboard2 == (x4-x3) * (y4-y3);
-    intersection1 == max(0,min(x2,x6) - max(x1,x5)) * max(0,min(y2,y6) - max(y1,y5));
-    intersection2 == max(0,min(x4,y6) - max(y3,y5)) * max(0,min(y4,y6) - max(y3,y5));
-    
 
-    int ans = billboard1 + billboard2 - intersection1 - intersection2;
-    
-    cout << ans << endl;
+Rect a;
+Rect b;
+Rect c;
+
+cin >> a.x1 >> a.y1 >> a.y1 >> a.y2;
+cin >> b.x1 >> b.y1 >> b.x2 >> b.y2;
+cin >> c.x1 >> c.y1 >> c.x2 >> c.y2;
+
+int billboardcombinedarea = a.area() + b.area();
+int intersectedareaac = (c.y2-a.y1)*(c.x1-a.x2);
+int intersectedareaab = (c.x2-b.x1)*(c.y2-b.y1);
+int ans = billboardcombinedarea - intersectedareaab - intersectedareaac;
+
+cout << ans;
+
+
 }
