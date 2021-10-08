@@ -1,0 +1,1 @@
+max(B,A)-min(B,A) is how you do absolute value
