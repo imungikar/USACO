@@ -1,0 +1,1 @@
+declare your arrays with an integer
