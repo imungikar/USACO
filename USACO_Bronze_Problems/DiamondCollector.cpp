@@ -17,18 +17,18 @@ int main(){
         cin>>arr[i];
     }
     sort(arr.begin(),arr.end());
-    int z = 0;
+    int ans = 0;
     for(int i = 0;i<N;++i){
+        int sum = 1;
         for(int j=i+1;j<N;++j){
-            int sum = 1;
-            int dist = (arr[i]-arr[j]);
-            if(dist<K){
+            int dist = (arr[j]-arr[i]);
+            if(dist<=K){
                 sum++;
             }else if(dist>K){
                 break;
             }
-            z = max(sum,z);
+            ans = max(sum,ans);
         }
     }
-    cout << z;
+    cout << ans;
 }
