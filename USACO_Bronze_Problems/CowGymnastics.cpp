@@ -15,7 +15,7 @@ int main(){
             int temp;
             cin >> temp;
             temp--;
-            arr[i][temp]=j;//the number is just a name, use it as an indice to find the rank[5,4,0,1,2,3] becomes [2,3,5,4,1,0], 5th(technically 6th) is rank 0, etc
+            arr[i][temp]=j;//the number is just a name, use it as an indice to find the rank[6,5,1,2,3,4] becomes [3,4,5,6,2,1], 5th(technically 6th) is rank 0, etc
         }
     }
     int answer = 0;
