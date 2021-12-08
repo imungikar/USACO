@@ -21,7 +21,7 @@ int main(){
         cin >> b[i];
     }
     sort(a.begin(),a.end());
-    sort(b.being(),b.end());
+    sort(b->begin(),b.end());
     vector<int> stallnumber;
     stallnumber.resize(N);
     for(int i=0;i<N;i++){
